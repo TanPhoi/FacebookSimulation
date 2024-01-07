@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.createInformationUser.addStory.AddStoryFragment">
+
+        <LinearLayout
+            android:id="@+id/llStory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+                android:id="@+id/abStory"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:action_bar_post_btn="Lưu"
+                app:action_bar_post_btn_enable="true"
+                app:action_bar_post_title_left="Hủy"
+                app:action_bar_post_title_left_enable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#272727" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:background="#979797"
+                    android:elevation="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_user"
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/imgUser"
+                    android:text="Nguyễn Tấn Phôi"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/btnPermission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@id/imgUser"
+                    android:drawableLeft="@drawable/ic_permission_public"
+                    android:drawablePadding="4dp"
+                    android:text="Công khai"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#434343" />
+
+            <EditText
+                android:id="@+id/edtStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@null"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#5A5A5A"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#434343" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tvSumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="4dp"
+                    android:drawablePadding="4dp"
+                    android:text="0/101"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

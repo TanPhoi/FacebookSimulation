@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1E1E1E"
+        tools:context=".ui.permission.PermissionFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+            android:id="@+id/abPermission"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true"
+            app:action_bar_post_src_left="@drawable/ic_delete"
+            app:action_bar_post_src_left_enable="true"
+            app:action_bar_post_title="Đối tượng của bài viết"
+            app:action_bar_post_title_enable="true" />
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/abPermission"
+            android:background="#323232" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnSave"
+            android:layout_below="@id/vTop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Ai có thể xem bài viết này?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Bài viết của bạn có thể hiện thị trên Bảng feed, trang cá nhân, Messenger và trong kết quả tìm kiếm \n\n Tuy đối tượng mặc định là chỉ mình tôi, nhưng bạn có thể thay đổi đối tượng của riêng bài viết này."
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Chọn đối tượng"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdgPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvEnterName"
+                    android:layout_margin="8dp"
+                    android:padding="4dp">
+
+                    <RadioButton
+                        android:id="@+id/rbPermissionPublic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:buttonTint="#5BB6FF"
+                        android:drawableLeft="@drawable/ic_permission_public"
+                        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                        android:drawablePadding="6dp"
+                        android:padding="4dp"
+                        android:text="Công khai"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="-12sp"
+                        android:layout_marginRight="8dp"
+                        android:baselineAligned="false"
+                        android:text="Bất kỳ ai ở trên hoặc ngoài Facebook"
+                        android:textColor="#636262"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#353535" />
+
+                    <RadioButton
+                        android:id="@+id/rbPermissionFriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:buttonTint="#5BB6FF"
+                        android:drawableLeft="@drawable/ic_permission_friend"
+                        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                        android:drawablePadding="6dp"
+                        android:padding="4dp"
+                        android:text="Bạn bè"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="-12sp"
+                        android:layout_marginRight="8dp"
+                        android:baselineAligned="false"
+                        android:text="Bạn bè của bạn trên Facebook"
+                        android:textColor="#636262"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#353535" />
+
+                    <RadioButton
+                        android:id="@+id/rbPermissionPrivate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:buttonTint="#5BB6FF"
+                        android:drawableLeft="@drawable/ic_permission_padlock"
+                        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                        android:drawablePadding="6dp"
+                        android:padding="4dp"
+                        android:text="Chỉ mình tôi"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="-12sp"
+                        android:layout_marginRight="8dp"
+                        android:baselineAligned="false"
+                        android:text="Chỉ mình tôi"
+                        android:textColor="#636262"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#353535" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_btn_profile"
+            android:backgroundTint="#167ACA"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Xong"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.createInformationUser.highSchool.HighSchoolFragment">
+
+        <LinearLayout
+            android:id="@+id/llHighSchool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+                android:id="@+id/abHighSchool"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:action_bar_post_src_left="@drawable/ic_back"
+                app:action_bar_post_src_left_enable="true"
+                app:action_bar_post_title="Thêm trường trung học"
+                app:action_bar_post_title_enable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center|top"
+                android:background="#686868" />
+
+            <EditText
+                android:id="@+id/edtHighSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_student_education_study"
+                android:drawablePadding="4dp"
+                android:hint="Tên trường trung học(Bắt buộc)"
+                android:padding="6dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#777777"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center|top"
+                android:background="#686868" />
+
+            <TextView
+                android:id="@+id/btnPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/imgAvatar"
+                android:background="@drawable/background_white_border"
+                android:drawableLeft="@drawable/ic_permission_public"
+                android:drawableRight="@drawable/ic_show_permission"
+                android:drawablePadding="4dp"
+                android:padding="4dp"
+                android:text="Công khai"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_btn_profile"
+                android:backgroundTint="#167ACA"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Lưu"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

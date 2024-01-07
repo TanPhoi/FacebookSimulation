@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.phoint.facebooksimulation"
+    tools:ignore="ExtraText">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="com.google.android.apps.photos.permission.GALLERY_PROVIDER" />
+    <!--    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--    <uses-permission android:name="android.permission.CANCEL_NOTIFICATIONS" />-->
+    <uses-permission android:name="android.permission.SEND_SMS"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".BaseApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_facebook_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_facebook_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FacebookSimulation"
+        tools:targetApi="33">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".broadcastreceiver.FriendReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.MY_ACTION" />
+                <action android:name="com.example.ACTION_FRIEND_ACCEPT" />
+                <action android:name="com.example.ACTION_FRIEND_DELETE" />
+                <action android:name="com.example.ACTION_FRIEND_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".broadcastreceiver.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.PUT_NOTIFICATION" />
+                <action android:name="com.example.SERVICE_RECEIVE_NOTIFICATION" />
+                <action android:name="com.example.ACTION_UPDATE_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.FriendService"
+            android:enabled="true">
+        </service>
+
+        <service
+            android:name=".service.NotificationService"
+            android:enabled="true">
+        </service>
+    </application>
+
+</manifest>

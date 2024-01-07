@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.informationUserOther.InformationUserOtherFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarLogin
+            android:id="@+id/abInformationUserOther"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_login_enable_src_back="true"
+            app:action_bar_login_text_view_enable="true" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/abInformationUserOther"
+            android:background="#000000" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvInformationUserOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:background="#0C0C0C"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/tvShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rcvInformationUserOther"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Hết kết quả"
+            android:textColor="#959595"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

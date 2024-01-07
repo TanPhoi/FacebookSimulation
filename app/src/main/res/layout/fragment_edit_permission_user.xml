@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:id="@+id/rlPermission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            tools:context=".ui.editPermissionUser.EditPermissionUserFragment">
+
+            <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+                android:id="@+id/abPermission"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentTop="true"
+                app:action_bar_post_src_left="@drawable/ic_back"
+                app:action_bar_post_src_left_enable="true"
+                app:action_bar_post_title="Chỉnh sửa chi tiết"
+                app:action_bar_post_title_enable="true" />
+
+            <View
+                android:id="@+id/viewTop"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/abPermission"
+                android:background="#222222" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/view"
+                android:layout_below="@id/viewTop">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Chỉnh sửa phần giới thiệu"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Chi tiết bạn chọn sẽ hiển thị công khai."
+                        android:textColor="#B1B1B1"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Công việc"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlWork"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/cbWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/btnEditWork"
+                            android:buttonTint="#5BB6FF"
+                            android:text="Android Developer"
+                            android:textColor="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/btnEditWork"
+                            android:layout_width="40dp"
+                            android:layout_height="48dp"
+                            android:layout_above="@id/tvWork"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_pen" />
+
+                        <TextView
+                            android:id="@+id/tvWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbWork"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/btnWork"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcvFriends"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_btn_profile"
+                        android:backgroundTint="#474747"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Thêm nghề nghiệp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Học vấn"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlHighSchool"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/cbHighSchool"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/btnEditHighSchool"
+                            android:buttonTint="#5BB6FF"
+                            android:text="Trung học phổ thông Đầm Dơi"
+                            android:textColor="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/btnEditHighSchool"
+                            android:layout_width="40dp"
+                            android:layout_height="48dp"
+                            android:layout_above="@id/tvHighSchool"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_pen" />
+
+                        <TextView
+                            android:id="@+id/tvHighSchool"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbHighSchool"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlColleges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/cbColleges"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/btnEditColleges"
+                            android:buttonTint="#5BB6FF"
+                            android:text="Đại học Tây Đô"
+                            android:textColor="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/btnEditColleges"
+                            android:layout_width="40dp"
+                            android:layout_height="48dp"
+                            android:layout_above="@id/tvColleges"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_pen" />
+
+                        <TextView
+                            android:id="@+id/tvColleges"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbColleges"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/btnHighSchool"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcvFriends"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_btn_profile"
+                        android:backgroundTint="#474747"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Thêm trường trung học"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/btnColleges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcvFriends"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_btn_profile"
+                        android:backgroundTint="#474747"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Thêm trường cao đẳng/đại học"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Tỉnh/Thành phố hiện tại"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlCurrentCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/cbCurrentCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/btnEditCurrentCity"
+                            android:buttonTint="#5BB6FF"
+                            android:text="Cần Thơ"
+                            android:textColor="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/btnEditCurrentCity"
+                            android:layout_width="40dp"
+                            android:layout_height="48dp"
+                            android:layout_above="@id/tvCurrentCity"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_pen" />
+
+                        <TextView
+                            android:id="@+id/tvCurrentCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbCurrentCity"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/btnCurrentCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcvFriends"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_btn_profile"
+                        android:backgroundTint="#474747"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Thêm Tỉnh/Thành phố hiện tại"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Quê quán"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlHomeTown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/cbHomeTown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/btnEditHomeTown"
+                            android:buttonTint="#5BB6FF"
+                            android:text="Cà Mau"
+                            android:textColor="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/btnEditHomeTown"
+                            android:layout_width="40dp"
+                            android:layout_height="48dp"
+                            android:layout_above="@id/tvHomeTown"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_pen" />
+
+                        <TextView
+                            android:id="@+id/tvHomeTown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbHomeTown"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/btnHomeTown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcvFriends"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_btn_profile"
+                        android:backgroundTint="#474747"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Thêm quê quán"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Mối quan hệ"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlRelationShip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/cbRelationShip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/btnEditRelationShip"
+                            android:buttonTint="#5BB6FF"
+                            android:text="Độc thân"
+                            android:textColor="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/btnEditRelationShip"
+                            android:layout_width="40dp"
+                            android:layout_height="48dp"
+                            android:layout_above="@id/tvRelationShip"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_pen" />
+
+                        <TextView
+                            android:id="@+id/tvRelationShip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbRelationShip"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/btnRelationShip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcvFriends"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_btn_profile"
+                        android:backgroundTint="#474747"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Thêm mối quan hệ"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Tham gia Facebook"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/cbPermission1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:buttonTint="#5BB6FF"
+                            android:text="Tham gia Facebook vào Tháng 4 năm 2021"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvNotification1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbPermission1"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Người theo dõi"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/cbPermission2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:buttonTint="#5BB6FF"
+                            android:hint="dasdasdasd"
+                            android:text="Có 302 người theo dõi"
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvNotification2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cbPermission2"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Sẽ không hiển thị trong phần Giới thiệu nhưng vẫn Công Khai"
+                            android:textColor="#ACACAC" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#3C3C3C" />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@id/btnSave"
+                android:background="#3C3C3C" />
+
+            <TextView
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/background_btn_profile"
+                android:backgroundTint="#167ACA"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="Lưu"
+                android:textColor="#F8FAFB"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

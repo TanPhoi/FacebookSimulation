@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.otherPeopleComment.OtherPeopleCommentFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarDisplayImage
+            android:id="@+id/abComment"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_display_image_src_1_enable="true"
+            app:action_bar_display_image_src_2_enable="true"
+            app:action_bar_display_image_src_menu="@drawable/ic_menu_checklist"
+            app:action_bar_display_image_src_menu_enable="true"
+            app:action_bar_display_image_src_out="@drawable/ic_back"
+            app:action_bar_display_image_src_out_enable="true"
+            app:action_bar_display_text_view_1_enable="true"
+            app:action_bar_display_text_view_2_enable="true" />
+
+        <ScrollView
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/view1"
+            android:layout_below="@id/abComment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imgStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvContent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="2dp"
+                    android:adjustViewBounds="true"
+                    android:elevation="4dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgShowLike"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_below="@id/imgStatus"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/ic_like_blue"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgShowLove"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_below="@id/imgStatus"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/imgShowLike"
+                    android:src="@drawable/ic_love_red"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgShowSmile"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_below="@id/imgStatus"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/imgShowLove"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvPeopleLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgStatus"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toRightOf="@+id/imgShowSmile"
+                    android:textColor="#AEAEAE"
+                    android:textSize="10sp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tvPeopleLike"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#3C3C3C" />
+
+                <LinearLayout
+                    android:id="@+id/llButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/view"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLike"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgLike"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_toLeftOf="@+id/tvLike"
+                            android:src="@drawable/ic_like" />
+
+                        <TextView
+                            android:id="@+id/tvLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Thích"
+                            android:textColor="#AEAEAE"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_toLeftOf="@+id/tvComment"
+                            android:src="@drawable/ic_comment" />
+
+                        <TextView
+                            android:id="@+id/tvComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Bình luận"
+                            android:textColor="#AEAEAE"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnShare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_toLeftOf="@+id/tvShare"
+                            android:src="@drawable/ic_share" />
+
+                        <TextView
+                            android:id="@+id/tvShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Chia sẻ"
+                            android:textColor="#AEAEAE"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/llButton"
+                    android:background="#505050" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewBottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Tất cả bình luận"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_below="@id/viewBottom"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/textView"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_expand_arrow" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_above="@+id/linearLayout1"
+            android:background="#151515" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgComment"
+                    android:layout_width="48dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/btnRemoveComment"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/imgComment"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_remove_image" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="6dp"
+                android:elevation="14dp"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/btnImage"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    tools:src="@drawable/ic_photography" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_toLeftOf="@id/btnInsertComment"
+                    android:layout_toRightOf="@id/btnImage"
+                    android:background="@drawable/background_border_gray"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/edtComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="10"
+                        android:background="@null"
+                        android:hint="Viết bình luận..."
+                        android:padding="6dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#CACACA"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/btnSticker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        tools:src="@drawable/ic_feeling_while" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnInsertComment"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_arrow"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvShowImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvSticker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="6dp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="5" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

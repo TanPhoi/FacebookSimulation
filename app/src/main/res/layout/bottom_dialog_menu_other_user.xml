@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="2dp">
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:background="#474747" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vTop"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_btn_profile"
+            android:backgroundTint="@color/background"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+
+            <TextView
+                android:id="@+id/btnSavePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_save_post"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="2dp"
+                android:text="Lưu bài viết \nThêm vào danh sách các mục đã lưu."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnReportPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_report_post"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="2dp"
+                android:text="Báo cáo bài viết \nChúng tôi sẽ không cho biết ai đã báo cáo."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

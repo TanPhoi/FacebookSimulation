@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ActionBarLogin">
+        <attr name="action_bar_login_src_back" format="reference" />
+        <attr name="action_bar_login_search_view" format="string" />
+        <attr name="action_bar_login_text_view" format="string" />
+
+        <attr name="action_bar_login_enable_src_back" format="boolean" />
+        <attr name="action_bar_login_search_view_enable" format="boolean" />
+        <attr name="action_bar_login_text_view_enable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ActionBarUser">
+        <attr name="action_bar_user_src_one" format="reference" />
+        <attr name="action_bar_user_text_one" format="string" />
+        <attr name="action_bar_user_text_two" format="string" />
+        <attr name="action_bar_user_button_one" format="string" />
+        <attr name="action_bar_user_src_two" format="reference" />
+        <attr name="action_bar_user_src_three" format="reference" />
+
+
+        <attr name="action_bar_user_text_one_enable" format="boolean" />
+        <attr name="action_bar_user_button_one_enable" format="boolean" />
+        <attr name="action_bar_user_text_two_enable" format="boolean" />
+        <attr name="action_bar_user_src_two_enable" format="boolean" />
+        <attr name="action_bar_user_src_three_enable" format="boolean" />
+        <attr name="action_bar_user_src_one_enable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ActionBarPost">
+        <attr name="action_bar_post_src_left" format="reference" />
+        <attr name="action_bar_post_title" format="string" />
+        <attr name="action_bar_post_btn" format="string" />
+        <attr name="action_bar_post_title_left" format="string" />
+        <attr name="action_bar_post_src_right" format="reference" />
+
+        <attr name="action_bar_post_title_left_enable" format="boolean" />
+        <attr name="action_bar_post_src_right_enable" format="boolean" />
+        <attr name="action_bar_post_src_left_enable" format="boolean" />
+        <attr name="action_bar_post_title_enable" format="boolean" />
+        <attr name="action_bar_post_btn_enable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ActionBarDisplayImage">
+        <attr name="action_bar_display_image_src_out" format="reference" />
+        <attr name="action_bar_display_image_src_menu" format="reference" />
+        <attr name="action_bar_display_image_src_check_in" format="reference" />
+        <attr name="action_bar_display_image_src_tag" format="reference" />
+        <attr name="action_bar_display_image_src_1" format="reference" />
+        <attr name="action_bar_display_image_src_2" format="reference" />
+        <attr name="action_bar_display_text_view_1" format="string" />
+        <attr name="action_bar_display_text_view_2" format="string" />
+
+        <attr name="action_bar_display_image_src_out_enable" format="boolean" />
+        <attr name="action_bar_display_image_src_menu_enable" format="boolean" />
+        <attr name="action_bar_display_image_src_check_in_enable" format="boolean" />
+        <attr name="action_bar_display_image_src_tag_enable" format="boolean" />
+        <attr name="action_bar_display_image_src_1_enable" format="boolean" />
+        <attr name="action_bar_display_image_src_2_enable" format="boolean" />
+        <attr name="action_bar_display_text_view_1_enable" format="boolean" />
+        <attr name="action_bar_display_text_view_2_enable" format="boolean" />
+    </declare-styleable>
+
+</resources>

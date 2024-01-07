@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="2dp">
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:background="#474747" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vTop"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_btn_profile"
+            android:backgroundTint="@color/background"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+
+            <TextView
+                android:id="@+id/btnPostPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_post_pins"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="2dp"
+                android:text="Ghim bài viết"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnEditPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_pen"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="2dp"
+                android:text="Chỉnh sửa bài viết"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnHandlePermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_padlock"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="2dp"
+                android:text="Chỉnh sửa quyền riêng tư"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnDeletePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_trash"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="2dp"
+                android:text="Chuyển vào thùng rác"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

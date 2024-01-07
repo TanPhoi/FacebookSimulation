@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.editPost.EditPostFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+            android:id="@+id/abEditPost"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            app:action_bar_post_btn="Lưu"
+            app:action_bar_post_btn_enable="true"
+            app:action_bar_post_src_left="@drawable/ic_delete"
+            app:action_bar_post_src_left_enable="true"
+            app:action_bar_post_title="Chỉnh sửa bài viết"
+            app:action_bar_post_title_enable="true" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/abEditPost"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp">
+
+            <RelativeLayout
+                android:id="@+id/rlContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/background_oval"
+                    android:elevation="15dp"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user"
+                    app:shapeAppearanceOverlay="@style/Circular" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/imgAvatar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Nguyễn Tấn Phôi" />
+
+                <TextView
+                    android:id="@+id/tvPermission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toRightOf="@id/imgAvatar"
+                    android:background="@drawable/background_white_border"
+                    android:backgroundTint="#232323"
+                    android:drawableLeft="@drawable/ic_permission_public"
+                    android:drawableRight="@drawable/ic_show_permission"
+                    android:drawablePadding="4dp"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Công khai"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgAvatar"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imgStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editContent"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBottomDialog"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img1"
+                    android:padding="8dp"
+                    android:text="Chỉnh sửa bài viết của bạn"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img2"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/ic_image" />
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img3"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/ic_friend_blue" />
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img4"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/ic_feeling" />
+
+                <ImageView
+                    android:id="@+id/img4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/ic_check_in" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

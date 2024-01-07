@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:padding="4dp"
+        tools:context=".ui.securityManagement.SecurityManagementFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarLogin
+            android:id="@+id/abChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true"
+            app:action_bar_login_enable_src_back="true" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/abChangePassword">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mật khẩu và bảo mật"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Đề xuất"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/btnChangeUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_find" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image4"
+                        android:layout_toRightOf="@id/image1"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Kiểm tra các cài đặt bảo mật quan trọng"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv1"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image4"
+                        android:layout_toRightOf="@id/image1"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Hãy cùng thực hiện một vài bước theo hướng dẫn để bảo vệ tài khoản của bạn"
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Đăng nhập"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_key" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image5"
+                        android:layout_toRightOf="@id/image3"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Đổi mật khẩu"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv2"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image5"
+                        android:layout_toRightOf="@id/image3"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Bạn nên sử dụng mật khẩu mạnh mà mình chưa sử dụng ở đâu hết"
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Xác thực 2 yếu tố"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image6"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_shield" />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image7"
+                        android:layout_toRightOf="@id/image6"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Dùng tính năng xác thực 2 yếu tố"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv4"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image7"
+                        android:layout_toRightOf="@id/image6"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Chúng tôi sẽ yêu cầu mã đăng nhập nếu phát hiện thấy lần đăng nhập từ thiết bị hoặc trình duyệt lạ."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image8"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_mobile" />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image9"
+                        android:layout_toRightOf="@id/image8"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Đăng nhập hợp lệ"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv6"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image9"
+                        android:layout_toRightOf="@id/image8"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Xem lại danh sách thiết bị mà bạn sẽ không cần dùng mã đăng nhập."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tăng cường bảo mật"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image10"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_notification_black" />
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image11"
+                        android:layout_toRightOf="@id/image10"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Nhân cảnh báo về những lần đăng nhập lạ"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv7"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image11"
+                        android:layout_toRightOf="@id/image10"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Chúng tôi sẽ cho bạn biết nếu ai đó đăng nhập từ thiết bị hoặc trình duyệt mà bạn không thường dùng."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Mã hóa đầu cuối"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image12"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_notification_black" />
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image13"
+                        android:layout_toRightOf="@id/image12"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Nhận thông báo khi khóa thay đổi"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv8"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image13"
+                        android:layout_toRightOf="@id/image12"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Chúng tôi sẽ cho bạn biết khi khóa mã hóa đầu cuối của bạn hoặc khóa của người liên hệ thay đổi."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image14"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_notification_black" />
+
+                    <TextView
+                        android:id="@+id/tv9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image15"
+                        android:layout_toRightOf="@id/image14"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Đăng nhập vào đoạn chat mã hóa đầu cuối"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv9"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image15"
+                        android:layout_toRightOf="@id/image14"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Nhấn vào đây để truy cập Messenger và xem bạn có thể gửi cũng như nhận tin nhắn và cuộc gọi mã hóa đầu cuối ở đâu."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image16"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_arrow_black" />
+
+                    <TextView
+                        android:id="@+id/tv10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image17"
+                        android:layout_toRightOf="@id/image16"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Bộ nhớ an toàn"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv10"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image17"
+                        android:layout_toRightOf="@id/image16"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Nhận tin nhắn mã hóa đầu cuối trên khắp các thiết bị."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Nâng cao"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image18"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_email" />
+
+                    <TextView
+                        android:id="@+id/tv11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image19"
+                        android:layout_toRightOf="@id/image18"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Xem email gần đây từ Facebook"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv11"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image19"
+                        android:layout_toRightOf="@id/image18"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Xem danh sách email mà gần đây chúng tôi đã gửi cho bạn, trong đó có các email về bảo mật."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Nhận trợ giúp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image20"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_help_question" />
+
+                    <TextView
+                        android:id="@+id/tv12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image21"
+                        android:layout_toRightOf="@id/image20"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Tìm hiểu thêm về bảo mật"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv12"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image21"
+                        android:layout_toRightOf="@id/image20"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Tìm hiểu thêm về các tính năng bạn có thể sử dụng để giữ an toàn trên Facebook."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image23"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_shield" />
+
+                    <TextView
+                        android:id="@+id/tv13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/image24"
+                        android:layout_toRightOf="@id/image23"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Nếu bạn cho rằng tài khoản của mình đã bị hack"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv13"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toLeftOf="@id/image24"
+                        android:layout_toRightOf="@id/image23"
+                        android:gravity="left|center"
+                        android:padding="4dp"
+                        android:text="Nếu bạn nhận thấy hoạt động bất thường trên tài khoản của mình, hãy cho chúng tôi biết điều gì đang xảy ra để chúng tôi có thể trợ giúp bạn."
+                        android:textColor="#919191"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="#393938" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

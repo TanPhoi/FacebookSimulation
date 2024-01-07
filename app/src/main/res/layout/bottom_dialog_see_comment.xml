@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:background="#474747" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/btnPostPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:padding="2dp"
+                    android:text="Ghim bài viết"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/ic_post_pins"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/btnSavePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:padding="2dp"
+                    android:text="Lưu bài viết"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/ic_save_post"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/btnEditPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:padding="2dp"
+                    android:text="Chỉnh sửa bài viết"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/ic_pen"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/btnEditPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:padding="2dp"
+                    android:text="Chỉnh sửa quyền riêng tư"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/ic_padlock"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/btnDeletePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:padding="2dp"
+                    android:text="Xóa"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/ic_trash"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp" />
+
+    </LinearLayout>
+</layout>

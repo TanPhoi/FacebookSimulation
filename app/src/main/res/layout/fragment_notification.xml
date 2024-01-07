@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/notificationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.notification.NotificationFragment">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <com.phoint.facebooksimulation.ui.widget.ActionBarUser
+                    android:id="@+id/abNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    app:action_bar_user_src_one="@drawable/ic_notification"
+                    app:action_bar_user_src_one_enable="true"
+                    app:action_bar_user_src_three_enable="true"
+                    app:action_bar_user_src_two_enable="true"
+                    app:action_bar_user_text_one="Thông báo"
+                    app:action_bar_user_text_one_enable="true"
+                    app:layout_scrollFlags="scroll|enterAlways" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+
+                            <include layout="@layout/shimmer_notification_layout" />
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <TextView
+                        android:id="@+id/tvHideNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background"
+                        android:gravity="center"
+                        android:text="Chưa có thông bào"
+                        android:textColor="#C6C6C6"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+</layout>

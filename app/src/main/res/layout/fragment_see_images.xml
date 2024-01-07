@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.seeImages.SeeImagesFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarUser
+            android:id="@+id/abImage"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_user_src_one="@drawable/ic_back"
+            app:action_bar_user_src_one_enable="true"
+            app:action_bar_user_src_three_enable="true"
+            app:action_bar_user_text_two="Nguyễn Tấn Phôi"
+            app:action_bar_user_text_two_enable="true" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/abImage"
+            android:layout_margin="8dp"
+            android:text="Ảnh của Nguyễn Tấn Phôi"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvName"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3" />
+
+    </RelativeLayout>
+</layout>

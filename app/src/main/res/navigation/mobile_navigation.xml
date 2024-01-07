@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userNavigation"
+    app:startDestination="@+id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.phoint.facebooksimulation.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_userNavigationFragment"
+            app:destination="@id/userNavigationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.phoint.facebooksimulation.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_userNavigationFragment"
+            app:destination="@id/userNavigationFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_createUserNameFragment"
+            app:destination="@id/createUserNameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_emailRequiredFragment"
+            app:destination="@id/emailRequiredFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_findAccountFragment"
+            app:destination="@id/findAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userNavigationFragment"
+        android:name="com.phoint.facebooksimulation.ui.userNavigation.UserNavigationFragment"
+        android:label="UserNavigationFragment"
+        tools:layout="@layout/fragment_user_navigation">
+        <action
+            android:id="@+id/action_userNavigationFragment_to_saveFavoritePostsFragment"
+            app:destination="@id/saveFavoritePostsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_searchHistoryFragment"
+            app:destination="@id/searchHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_top_right"
+            app:popExitAnim="@anim/slide_out_top_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_findNewFriendsFragment"
+            app:destination="@id/findNewFriendsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_userOfFriendFragment"
+            app:destination="@id/userOfFriendFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_otherPeopleCommentFragment"
+            app:destination="@id/otherPeopleCommentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_seenCommentAvatarFragment"
+            app:destination="@id/seenCommentAvatarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_postsAnArticleFragment"
+            app:destination="@id/postsAnArticleFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_out_up"
+            app:popEnterAnim="@anim/slide_down"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_displayImageFragment"
+            app:destination="@id/displayImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userNavigationFragment_to_seeCommentSharePostFragment"
+            app:destination="@id/seeCommentSharePostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.phoint.facebooksimulation.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_postsAnArticleFragment"
+            app:destination="@id/postsAnArticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_sendInformationFragment"
+            app:destination="@id/sendInformationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_editInformationFragment"
+            app:destination="@id/editInformationFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_displayImageFragment"
+            app:destination="@id/displayImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingPageUserFragment"
+            app:destination="@id/settingPageUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_seeCommentsFragment"
+            app:destination="@id/seeCommentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_userOfFriendFragment"
+            app:destination="@id/userOfFriendFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_searchHistoryFragment"
+            app:destination="@id/searchHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_findNewFriendsFragment"
+            app:destination="@id/findNewFriendsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_seeImagesFragment"
+            app:destination="@id/seeImagesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_seeCommentSharePostFragment"
+            app:destination="@id/seeCommentSharePostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_seenCommentAvatarFragment"
+            app:destination="@id/seenCommentAvatarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postsAnArticleFragment"
+        android:name="com.phoint.facebooksimulation.ui.posts.PostsAnArticleFragment"
+        android:label="PostsAnArticleFragment"
+        tools:layout="@layout/fragment_posts_an_article">
+        <action
+            android:id="@+id/action_postsAnArticleFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/genderFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.createGender.GenderFragment"
+        android:label="GenderFragment"
+        tools:layout="@layout/fragment_gender">
+        <action
+            android:id="@+id/action_genderFragment_to_phoneFragment"
+            app:destination="@id/phoneFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_genderFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.phone.PhoneFragment"
+        android:label="PhoneFragment"
+        tools:layout="@layout/fragment_phone">
+        <action
+            android:id="@+id/action_phoneFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_phoneFragment_to_emailFragment"
+            app:destination="@id/emailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_phoneFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.password.PasswordFragment"
+        android:label="PasswordFragment"
+        tools:layout="@layout/fragment_password">
+        <action
+            android:id="@+id/action_passwordFragment_to_loginFragmentDone"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_passwordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/yearOldFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.createYearOld.YearOldFragment"
+        android:label="YearOldFragment"
+        tools:layout="@layout/fragment_year_old">
+        <action
+            android:id="@+id/action_yearOldFragment_to_genderFragment"
+            app:destination="@id/genderFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_yearOldFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.email.EmailFragment"
+        android:label="EmailFragment"
+        tools:layout="@layout/fragment_email">
+        <action
+            android:id="@+id/action_emailFragment_to_phoneFragment"
+            app:destination="@id/phoneFragment" />
+        <action
+            android:id="@+id/action_emailFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dataOfBirthFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.createDateOfBirth.DataOfBirthFragment"
+        android:label="DataOfBirthFragment"
+        tools:layout="@layout/fragment_data_of_birth">
+        <action
+            android:id="@+id/action_dataOfBirthFragment_to_yearOldFragment"
+            app:destination="@id/yearOldFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dataOfBirthFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createUserNameFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.createUserName.CreateUserNameFragment"
+        android:label="CreateUserNameFragment"
+        tools:layout="@layout/fragment_create_user_name">
+        <action
+            android:id="@+id/action_createUserNameFragment_to_dataOfBirthFragment"
+            app:destination="@id/dataOfBirthFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sendInformationFragment"
+        android:name="com.phoint.facebooksimulation.ui.sendInformation.SendInformationFragment"
+        android:label="SendInformationFragment"
+        tools:layout="@layout/fragment_send_information">
+        <action
+            android:id="@+id/action_sendInformationFragment_to_workExperienceFragment"
+            app:destination="@id/workExperienceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_sendInformationFragment_to_collegesFragment"
+            app:destination="@id/collegesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_sendInformationFragment_to_highSchoolFragment"
+            app:destination="@id/highSchoolFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_sendInformationFragment_to_currentCityProvinceFragment"
+            app:destination="@id/currentCityProvinceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_sendInformationFragment_to_homeTownFragment"
+            app:destination="@id/homeTownFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_sendInformationFragment_to_relationshipFragment"
+            app:destination="@id/relationshipFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workExperienceFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.wordExperience.WorkExperienceFragment"
+        android:label="WorkExperienceFragment"
+        tools:layout="@layout/fragment_work_experience" />
+
+    <fragment
+        android:id="@+id/collegesFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.colleges.CollegesFragment"
+        android:label="CollegesFragment"
+        tools:layout="@layout/fragment_colleges" />
+
+    <fragment
+        android:id="@+id/highSchoolFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.highSchool.HighSchoolFragment"
+        android:label="HighSchoolFragment"
+        tools:layout="@layout/fragment_high_school" />
+
+    <fragment
+        android:id="@+id/currentCityProvinceFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.currentCityAndProvince.CurrentCityProvinceFragment"
+        android:label="CurrentCityProvinceFragment"
+        tools:layout="@layout/fragment_current_city_province" />
+
+    <fragment
+        android:id="@+id/homeTownFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.homeTown.HomeTownFragment"
+        android:label="HomeTownFragment"
+        tools:layout="@layout/fragment_home_town" />
+
+    <fragment
+        android:id="@+id/relationshipFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.relationship.RelationshipFragment"
+        android:label="RelationshipFragment"
+        tools:layout="@layout/fragment_relationship" />
+
+    <fragment
+        android:id="@+id/editInformationFragment"
+        android:name="com.phoint.facebooksimulation.ui.editInformation.EditInformationFragment"
+        android:label="EditInformationFragment"
+        tools:layout="@layout/fragment_edit_information">
+
+        <action
+            android:id="@+id/action_editInformationFragment_to_showImageFragment"
+            app:destination="@id/showImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_editInformationFragment_to_sendInformationFragment"
+            app:destination="@id/sendInformationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_editInformationFragment_to_addStoryFragment"
+            app:destination="@id/addStoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_editInformationFragment_to_editPermissionUserFragment"
+            app:destination="@id/editPermissionUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/displayImageFragment"
+        android:name="com.phoint.facebooksimulation.ui.displayImage.DisplayImageFragment"
+        android:label="DisplayImageFragment"
+        tools:layout="@layout/fragment_display_image">
+        <action
+            android:id="@+id/action_displayImageFragment_to_otherPeopleCommentFragment"
+            app:destination="@id/otherPeopleCommentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingPageUserFragment"
+        android:name="com.phoint.facebooksimulation.ui.settingPageUser.SettingPageUserFragment"
+        android:label="SettingPageUserFragment"
+        tools:layout="@layout/fragment_setting_page_user" />
+
+    <fragment
+        android:id="@+id/showImageFragment"
+        android:name="com.phoint.facebooksimulation.ui.showImagePhoneApp.ShowImageFragment"
+        android:label="ShowImageFragment"
+        tools:layout="@layout/fragment_show_image">
+        <action
+            android:id="@+id/action_showImageFragment_to_photoPreviewFragment"
+            app:destination="@id/photoPreviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/showImageFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoPreviewFragment"
+        android:name="com.phoint.facebooksimulation.ui.photoPrewiew.PhotoPreviewFragment"
+        android:label="PhotoPreviewFragment"
+        tools:layout="@layout/fragment_photo_preview">
+        <action
+            android:id="@+id/action_photoPreviewFragment_to_editInformationFragment"
+            app:destination="@id/editInformationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/photoPreviewFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_photoPreviewFragment_to_showImageFragment"
+            app:destination="@id/showImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/photoPreviewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addStoryFragment"
+        android:name="com.phoint.facebooksimulation.ui.createInformationUser.addStory.AddStoryFragment"
+        android:label="AddStoryFragment"
+        tools:layout="@layout/fragment_add_story">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/editPermissionUserFragment"
+        android:name="com.phoint.facebooksimulation.ui.editPermissionUser.EditPermissionUserFragment"
+        android:label="EditPermissionUserFragment"
+        tools:layout="@layout/fragment_edit_permission_user">
+
+        <action
+            android:id="@+id/action_editPermissionUserFragment_to_workExperienceFragment"
+            app:destination="@id/workExperienceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_editPermissionUserFragment_to_highSchoolFragment"
+            app:destination="@id/highSchoolFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_editPermissionUserFragment_to_collegesFragment"
+            app:destination="@id/collegesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_editPermissionUserFragment_to_currentCityProvinceFragment"
+            app:destination="@id/currentCityProvinceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_editPermissionUserFragment_to_homeTownFragment"
+            app:destination="@id/homeTownFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_editPermissionUserFragment_to_relationshipFragment"
+            app:destination="@id/relationshipFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.phoint.facebooksimulation.ui.permission.PermissionFragment"
+        android:label="PermissionFragment"
+        tools:layout="@layout/fragment_permission">
+        <action
+            android:id="@+id/action_permissionFragment_to_postsAnArticleFragment"
+            app:destination="@id/postsAnArticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/postsAnArticleFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_permissionFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/postsAnArticleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seeCommentsFragment"
+        android:name="com.phoint.facebooksimulation.ui.seeComment.SeeCommentsFragment"
+        android:label="SeeCommentsFragment"
+        tools:layout="@layout/fragment_see_comments">
+        <action
+            android:id="@+id/action_seeCommentsFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_seeCommentsFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_seeCommentsFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_seeCommentsFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editPostFragment"
+        android:name="com.phoint.facebooksimulation.ui.editPost.EditPostFragment"
+        android:label="EditPostFragment"
+        tools:layout="@layout/fragment_edit_post">
+        <action
+            android:id="@+id/action_editPostFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchOtherUserFragment"
+        android:name="com.phoint.facebooksimulation.ui.searchOtherUser.SearchOtherUserFragment"
+        android:label="SearchOtherUserFragment"
+        tools:layout="@layout/fragment_search_other_user">
+        <action
+            android:id="@+id/action_searchOtherUserFragment_to_informationUserOtherFragment"
+            app:destination="@id/informationUserOtherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_top_right"
+            app:popExitAnim="@anim/slide_out_top_right" />
+        <!--        <action-->
+        <!--            android:id="@+id/action_searchOtherUserFragment_to_profileOtherUserFragment"-->
+        <!--            app:destination="@id/profileOtherUserFragment"-->
+        <!--            app:enterAnim="@anim/slide_in_right"-->
+        <!--            app:exitAnim="@anim/slide_out_left"-->
+        <!--            app:popEnterAnim="@anim/slide_in_left"-->
+        <!--            app:popExitAnim="@anim/slide_out_right"-->
+        <!--            app:popUpTo="@id/searchOtherUserFragment"-->
+        <!--            app:popUpToInclusive="true" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/informationUserOtherFragment"
+        android:name="com.phoint.facebooksimulation.ui.informationUserOther.InformationUserOtherFragment"
+        android:label="InformationUserOtherFragment"
+        tools:layout="@layout/fragment_information_user_other">
+        <action
+            android:id="@+id/action_informationUserOtherFragment_to_searchOtherUserFragment"
+            app:destination="@id/searchOtherUserFragment" />
+        <action
+            android:id="@+id/action_informationUserOtherFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_informationUserOtherFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileOtherUserFragment"
+        android:name="com.phoint.facebooksimulation.ui.profileOtherUser.ProfileOtherUserFragment"
+        android:label="ProfileOtherUserFragment"
+        tools:layout="@layout/fragment_profile_other_user">
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_informationUserOtherFragment"
+            app:destination="@id/informationUserOtherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_searchOtherUserFragment"
+            app:destination="@id/searchOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_top_right"
+            app:popExitAnim="@anim/slide_out_top_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_otherPeopleCommentFragment"
+            app:destination="@id/otherPeopleCommentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_settingPageOtherUserFragment"
+            app:destination="@id/settingPageOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_sendProfileOtherFragment"
+            app:destination="@id/sendProfileOtherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_displayImageFragment"
+            app:destination="@id/displayImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_seenFriendsOfFriendFragment"
+            app:destination="@id/seenFriendsOfFriendFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_seeImagesFragment"
+            app:destination="@id/seeImagesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_seeCommentSharePostFragment"
+            app:destination="@id/seeCommentSharePostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileOtherUserFragment_to_seenCommentAvatarFragment"
+            app:destination="@id/seenCommentAvatarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otherPeopleCommentFragment"
+        android:name="com.phoint.facebooksimulation.ui.otherPeopleComment.OtherPeopleCommentFragment"
+        android:label="OtherPeopleCommentFragment"
+        tools:layout="@layout/fragment_other_people_comment">
+        <action
+            android:id="@+id/action_otherPeopleCommentFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_otherPeopleCommentFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingPageOtherUserFragment"
+        android:name="com.phoint.facebooksimulation.ui.settingPageOtherUser.SettingPageOtherUserFragment"
+        android:label="SettingPageOtherUserFragment"
+        tools:layout="@layout/fragment_setting_page_other_user" />
+
+    <fragment
+        android:id="@+id/saveFavoritePostsFragment"
+        android:name="com.phoint.facebooksimulation.ui.saveFavoritePosts.SaveFavoritePostsFragment"
+        android:label="SaveFavoritePostsFragment"
+        tools:layout="@layout/fragment_save_favorite_posts">
+        <action
+            android:id="@+id/action_saveFavoritePostsFragment_to_otherPeopleCommentFragment"
+            app:destination="@id/otherPeopleCommentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sendProfileOtherFragment"
+        android:name="com.phoint.facebooksimulation.ui.sendProfileOtherUser.SendProfileOtherFragment"
+        android:label="SendProfileOtherFragment"
+        tools:layout="@layout/fragment_send_profile_other" />
+
+    <fragment
+        android:id="@+id/searchHistoryFragment"
+        android:name="com.phoint.facebooksimulation.ui.searchHistory.SearchHistoryFragment"
+        android:label="SearchHistoryFragment"
+        tools:layout="@layout/fragment_search_history">
+        <action
+            android:id="@+id/action_searchHistoryFragment_to_searchOtherUserFragment"
+            app:destination="@id/searchOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_top_right"
+            app:popExitAnim="@anim/slide_out_top_right" />
+        <action
+            android:id="@+id/action_searchHistoryFragment_to_informationUserOtherFragment"
+            app:destination="@id/informationUserOtherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_top_right"
+            app:popExitAnim="@anim/slide_out_top_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userOfFriendFragment"
+        android:name="com.phoint.facebooksimulation.ui.userOfFriend.UserOfFriendFragment"
+        android:label="UserOfFriendFragment"
+        tools:layout="@layout/fragment_user_of_friend">
+        <action
+            android:id="@+id/action_userOfFriendFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userOfFriendFragment_to_findNewFriendsFragment"
+            app:destination="@id/findNewFriendsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userOfFriendFragment_to_seenFriendsOfFriendFragment"
+            app:destination="@id/seenFriendsOfFriendFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findNewFriendsFragment"
+        android:name="com.phoint.facebooksimulation.ui.findNewFriends.FindNewFriendsFragment"
+        android:label="FindNewFriendsFragment"
+        tools:layout="@layout/fragment_find_new_friends">
+        <action
+            android:id="@+id/action_findNewFriendsFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.phoint.facebooksimulation.ui.setting.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_settingFragment_to_personalAndAccountFragment"
+            app:destination="@id/personalAndAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingFragment_to_securityManagementFragment"
+            app:destination="@id/securityManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalAndAccountFragment"
+        android:name="com.phoint.facebooksimulation.ui.personalAndAccout.PersonalAndAccountFragment"
+        android:label="PersonalAndAccountFragment"
+        tools:layout="@layout/fragment_personal_and_account">
+        <action
+            android:id="@+id/action_personalAndAccountFragment_to_changeUserNameFragment"
+            app:destination="@id/changeUserNameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_personalAndAccountFragment_to_contactInfoFragment"
+            app:destination="@id/contactInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changeUserNameFragment"
+        android:name="com.phoint.facebooksimulation.ui.changeUserName.ChangeUserNameFragment"
+        android:label="ChangeUserNameFragment"
+        tools:layout="@layout/fragment_change_user_name" />
+
+    <fragment
+        android:id="@+id/contactInfoFragment"
+        android:name="com.phoint.facebooksimulation.ui.contactInfo.ContactInfoFragment"
+        android:label="ContactInfoFragment"
+        tools:layout="@layout/fragment_contact_info" />
+
+    <fragment
+        android:id="@+id/securityManagementFragment"
+        android:name="com.phoint.facebooksimulation.ui.securityManagement.SecurityManagementFragment"
+        android:label="SecurityManagementFragment"
+        tools:layout="@layout/fragment_security_management">
+        <action
+            android:id="@+id/action_securityManagementFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.phoint.facebooksimulation.ui.changePassword.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password" />
+
+    <fragment
+        android:id="@+id/seenCommentAvatarFragment"
+        android:name="com.phoint.facebooksimulation.ui.seenCommentAvatar.SeenCommentAvatarFragment"
+        android:label="SeenCommentAvatarFragment"
+        tools:layout="@layout/fragment_seen_comment_avatar" />
+
+    <fragment
+        android:id="@+id/seenFriendsOfFriendFragment"
+        android:name="com.phoint.facebooksimulation.ui.seenFriendsOfFriend.SeenFriendsOfFriendFragment"
+        android:label="SeenFriendsOfFriendFragment"
+        tools:layout="@layout/fragment_seen_friends_of_friend">
+        <action
+            android:id="@+id/action_seenFriendsOfFriendFragment_to_profileOtherUserFragment"
+            app:destination="@id/profileOtherUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_seenFriendsOfFriendFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seeImagesFragment"
+        android:name="com.phoint.facebooksimulation.ui.seeImages.SeeImagesFragment"
+        android:label="SeeImagesFragment"
+        tools:layout="@layout/fragment_see_images">
+        <action
+            android:id="@+id/action_seeImagesFragment_to_displayImageFragment"
+            app:destination="@id/displayImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_seeImagesFragment_to_searchHistoryFragment"
+            app:destination="@id/searchHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterOTPFragment"
+        android:name="com.phoint.facebooksimulation.ui.enterOTP.EnterOTPFragment"
+        android:label="EmailDirectionsFragment"
+        tools:layout="@layout/fragment_enter_otp">
+        <action
+            android:id="@+id/action_enterOTPFragment_to_changeForgetPasswordFragment"
+            app:destination="@id/changeForgetPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/emailRequiredFragment"
+        android:name="com.phoint.facebooksimulation.ui.emailRequired.EmailRequiredFragment"
+        android:label="EmailRequiredFragment"
+        tools:layout="@layout/fragment_email_required">
+        <action
+            android:id="@+id/action_emailRequiredFragment_to_userNavigationFragment"
+            app:destination="@id/userNavigationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/userNavigationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findAccountFragment"
+        android:name="com.phoint.facebooksimulation.ui.findAccount.FindAccountFragment"
+        android:label="FindAccountFragment">
+        <action
+            android:id="@+id/action_findAccountFragment_to_enterOTPFragment"
+            app:destination="@id/enterOTPFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changeForgetPasswordFragment"
+        android:name="com.phoint.facebooksimulation.ui.changeForgetPassword.ChangeForgetPasswordFragment"
+        android:label="ChangeForgetPasswordFragment"
+        tools:layout="@layout/fragment_change_forget_password">
+        <action
+            android:id="@+id/action_changeForgetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/changeForgetPasswordFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seeCommentSharePostFragment"
+        android:name="com.phoint.facebooksimulation.ui.seeCommentSharePost.SeeCommentSharePostFragment"
+        android:label="SeeCommentSharePostFragment"
+        tools:layout="@layout/fragment_see_comment_share_post" />
+</navigation>

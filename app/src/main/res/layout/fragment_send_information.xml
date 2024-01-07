@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical"
+            tools:context=".ui.sendInformation.SendInformationFragment">
+
+            <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+                android:id="@+id/abSendInformation"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:action_bar_post_src_left="@drawable/ic_back"
+                app:action_bar_post_src_left_enable="true"
+                app:action_bar_post_title="Giới thiệu"
+                app:action_bar_post_title_enable="true" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="40dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Công việc"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnWorkExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_work"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:textColor="#2196F3"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Thêm kinh nghiệm làm việc" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Học vấn"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnColleges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_student_education_study"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:textColor="#2196F3"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Thêm trường cao đẳng" />
+
+            <TextView
+                android:id="@+id/btnHighSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_student_education_study"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:textColor="#2196F3"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Thêm trường trung học" />
+
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Nơi từng sống"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnCurrentCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_address_location_map"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:textColor="#2196F3"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Thêm tỉnh thành phố hiện tại" />
+
+            <TextView
+                android:id="@+id/btnHomeTown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_address_location_map"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:textColor="#2196F3"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Thêm quê quán" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Thông tin liên hệ"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="0328959732"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Thêm email"
+                android:textColor="#2196F3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Thông tin cơ bản"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/btnGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_user_min"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Nam"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/btnDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_brithday_christmas"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="26/04/2000"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Mối quan hệ"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnRelationShip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_love"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:textColor="#2196F3"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Thêm mối quan hệ" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

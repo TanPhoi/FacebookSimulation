@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="4dp"
+        tools:context=".ui.enterOTP.EnterOTPFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+            android:id="@+id/abEmailDirections"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_post_src_left="@drawable/ic_back"
+            app:action_bar_post_src_left_enable="true"
+            app:action_bar_post_title="Quên mật khẩu"
+            app:action_bar_post_title_enable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Chúng tôi đã gửi mã của bạn đến:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="0328959732"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Vui lòng kiểm tra  trong sms của bạn. Mã này gồm 6 số."
+            android:textColor="#C3C3C3"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Bạn có mã chưa?"
+            android:textColor="#51ADFD"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Nhập mã gồm 6 chữ số"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtVerificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/background_edittext_blue"
+            android:gravity="center"
+            android:hint="######"
+            android:padding="8dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BABABA" />
+
+        <TextView
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/background_button_login"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Tiếp tục"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#F2FFFFFF"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Hủy"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>

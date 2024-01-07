@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "216791998119",
+    "project_id": "facebooksimulation-834bf",
+    "storage_bucket": "facebooksimulation-834bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216791998119:android:6851c1cfbd0cbb68c54582",
+        "android_client_info": {
+          "package_name": "com.phoint.facebooksimulation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216791998119-ju4s9nf8jra63rrm21d61e8rhjfi8oqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.phoint.facebooksimulation",
+            "certificate_hash": "aa2ebd001676ae3ea84ff5f8cc57430fd1bf8d88"
+          }
+        },
+        {
+          "client_id": "216791998119-boum9frrqd435voibb58l7op8vq169v2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpJQCPcjH5OZdvUl31FStb6ldA_0saMc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216791998119-boum9frrqd435voibb58l7op8vq169v2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

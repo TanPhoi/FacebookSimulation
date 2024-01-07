@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Scale: Zoom in to make it appear -->
+    <scale
+        android:duration="1000"
+        android:fromXScale="0.0"
+        android:toXScale="1.0"
+        android:fromYScale="0.0"
+        android:toYScale="1.0"
+        android:pivotX="100%"
+        android:pivotY="100%" />
+
+    <!-- Translate: Move to the top right corner -->
+    <translate
+        android:duration="1000"
+        android:fromXDelta="100%"
+        android:toXDelta="0%"
+        android:fromYDelta="-100%"
+        android:toYDelta="0%" />
+
+    <!-- Alpha: Fade in to make it opaque -->
+    <alpha
+        android:duration="1000"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+</set>

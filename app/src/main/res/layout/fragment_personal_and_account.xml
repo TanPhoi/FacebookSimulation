@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="4dp"
+        tools:context=".ui.personalAndAccout.PersonalAndAccountFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarLogin
+            android:id="@+id/abPersonalAndAccount"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_login_enable_src_back="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin cá nhân và tài khoản"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/btnChangeUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_user_min" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/image4"
+                android:layout_toRightOf="@id/image1"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Tên"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1"
+                android:layout_marginTop="-6dp"
+                android:layout_toLeftOf="@id/image4"
+                android:layout_toRightOf="@id/image1"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Nguyễn Tấn Phôi"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_next" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnContactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/image5"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Thông tin liên hệ"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv2"
+                android:layout_marginTop="-6dp"
+                android:layout_toLeftOf="@id/image5"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Quản lý số điện thoại và email của bạn"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_next" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/image6"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Xác nhận danh tính"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3"
+                android:layout_marginTop="-6dp"
+                android:layout_toLeftOf="@id/image6"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Xác nhận danh tính của bạn trên Facebook"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_next" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_settings_black" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/image7"
+                android:layout_toRightOf="@id/image2"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Quyền sở hữu và kiểm soát tài khoản"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv4"
+                android:layout_marginTop="-6dp"
+                android:layout_toLeftOf="@id/image7"
+                android:layout_toRightOf="@id/image2"
+                android:gravity="left|center"
+                android:padding="4dp"
+                android:text="Quản lý dữ liệu, sửa đổi người liên hệ thừa kế, vô hiệu hóa hoặc xóa tài khoản của bạn,v.v."
+                android:textColor="#919191"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_next" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

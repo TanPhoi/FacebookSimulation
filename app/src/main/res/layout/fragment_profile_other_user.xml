@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context=".ui.profileOtherUser.ProfileOtherUserFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarUser
+            android:id="@+id/abProfileOtherUser"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_user_src_one="@drawable/ic_back"
+            app:action_bar_user_src_one_enable="true"
+            app:action_bar_user_src_three_enable="true"
+            app:action_bar_user_text_two_enable="true" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/abProfileOtherUser">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <ImageView
+                        android:id="@+id/imgCoverImageUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#979797"
+                        android:scaleType="centerCrop"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="-90dp"
+                    android:background="#00979797">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgUser"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:background="#C1C1C1"
+                        android:elevation="4dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_avatar_user"
+                        app:shapeAppearanceOverlay="@style/Circular"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/tvNameUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:baselineAlignBottom="false"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:fabSize="normal" />
+
+                    <TextView
+                        android:id="@+id/tvStory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNameUser"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:baselineAlignBottom="false"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:fabSize="normal"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        tools:text=":))" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvStory"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:weightSum="6">
+
+                        <RelativeLayout
+                            android:id="@+id/btnAddFriend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/background_btn_profile"
+                            android:backgroundTint="#167ACA"
+                            android:elevation="14dp"
+                            android:gravity="center"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imgAddFriend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="4dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_add_friend" />
+
+                            <TextView
+                                android:id="@+id/tvAddFriend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toRightOf="@id/imgAddFriend"
+                                android:gravity="center"
+                                android:text="Thêm bạn bè"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/btnMessenger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_btn_profile"
+                            android:backgroundTint="#474747"
+                            android:elevation="14dp"
+                            android:gravity="center"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="4dp"
+                                android:src="@drawable/ic_messenger" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toRightOf="@id/imageView1"
+                                android:gravity="center"
+                                android:text="Nhắn tin"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/btnMenu"
+                            android:layout_width="44dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/background_btn_profile"
+                            android:backgroundTint="#474747"
+                            android:elevation="14dp"
+                            android:gravity="top|center"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@id/lnl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/linearLayout"
+                    android:background="@color/background"
+                    android:fillViewport="true"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/background"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/btnImage"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/background_posts_reels"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="Ảnh"
+                            android:textColor="#3BA6FB"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="#3C3C3C" />
+
+                        <LinearLayout
+                            android:id="@+id/lnl1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Chi tiết"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvWork"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_work"
+                                android:drawablePadding="8dp"
+                                android:padding="2dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:visibility="gone"
+                                tools:text="Android Devoloper" />
+
+                            <TextView
+                                android:id="@+id/tvColleges"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_student_education_study"
+                                android:drawablePadding="8dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:visibility="gone"
+                                tools:text="Học công nghệ thông tin tại Trường Đại Học Tây Đô" />
+
+                            <TextView
+                                android:id="@+id/tvHighSchool"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_student_education_study"
+                                android:drawablePadding="8dp"
+                                android:text="Đã học tại Hội cựu Học Sinh Trường THPT Đầm Dơi"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tvCurrentCity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_address_location_map"
+                                android:drawablePadding="8dp"
+                                android:text="Sống tại Cần Thơ"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tvHomeTown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_address_location_map"
+                                android:drawablePadding="8dp"
+                                android:text="Đến từ Cà Mau"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tvRelationship"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_love"
+                                android:drawablePadding="8dp"
+                                android:gravity="center"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:visibility="gone"
+                                tools:text="Độc thân" />
+
+                            <TextView
+                                android:id="@+id/tvFollow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_people_monitor"
+                                android:drawablePadding="8dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/btnSendInformation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:drawableLeft="@drawable/ic_three_dots"
+                                android:drawablePadding="8dp"
+                                android:text="Xem thông tin giới thiệu của bạn"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="8dp"
+                            android:background="#3C3C3C" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="8dp"
+                                android:text="Bạn bè"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvFriends"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv1"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#6A6A6A"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rcvFriends"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvFriends"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:spanCount="3" />
+
+                            <TextView
+                                android:id="@+id/btnSeeFriend"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rcvFriends"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/background_btn_profile"
+                                android:backgroundTint="#474747"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:text="Xem tất cả bạn bè"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="8dp"
+                            android:background="#3C3C3C" />
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmer_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/shimmer_post_layout" />
+
+                                <include layout="@layout/shimmer_post_layout" />
+                            </LinearLayout>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcvPost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+</layout>

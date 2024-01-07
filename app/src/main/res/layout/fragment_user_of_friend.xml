@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        tools:context=".ui.userOfFriend.UserOfFriendFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarPost
+            android:id="@+id/abFriendOfUser"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_post_src_left="@drawable/ic_back"
+            app:action_bar_post_src_left_enable="true"
+            app:action_bar_post_src_right="@drawable/ic_add"
+            app:action_bar_post_src_right_enable="true"
+            app:action_bar_post_title="Bạn bè của Phôi"
+            app:action_bar_post_title_enable="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btnPost1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/background_posts_reels"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="Tất cả"
+                android:textColor="#3BA6FB"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <SearchView
+            android:id="@+id/svUserOfFriend"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_gray_radius"
+            android:iconifiedByDefault="false"
+            android:queryHint="Tìm kiếm bạn bè" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvUserOfFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+</layout>

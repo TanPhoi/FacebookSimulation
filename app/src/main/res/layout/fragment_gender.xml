@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:padding="2dp"
+        tools:context=".ui.createInformationUser.createGender.GenderFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarLogin
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_login_enable_src_back="true" />
+
+        <TextView
+            android:id="@+id/tvWhatYouName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/action_bar"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Giới tính của bạn là gì?"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvEnterName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvWhatYouName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:text="Bạn có thể thay đổi người nhìn thấy giới tính của mình trên trang cá nhân vào lúc khác."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <RadioGroup
+            android:id="@+id/rdgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEnterName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/background"
+            android:padding="4dp">
+
+            <RadioButton
+                android:id="@+id/rdbGirl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                android:padding="4dp"
+                android:text="Nữ"
+                android:textColor="#FFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#202020" />
+
+            <RadioButton
+                android:id="@+id/rdbBoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                android:padding="4dp"
+                android:text="Nam"
+                android:textColor="#FFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#202020" />
+
+            <RadioButton
+                android:id="@+id/rdbCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                android:padding="4dp"
+                android:text="Khác"
+                android:textColor="#FFFFFF"></RadioButton>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rdgGender"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_button_login"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Kế tiếp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
+
+
+        <TextView
+            android:id="@+id/btnBackLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            android:text="Bạn đã có tài khoản?"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</layout>

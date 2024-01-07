@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:id="@+id/btnPermissionPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/imgPublic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_permission_public" />
+
+        <TextView
+            android:id="@+id/tvPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/imgPublic"
+            android:text="Công khai"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPublic"
+            android:layout_toRightOf="@+id/imgPublic"
+            android:text="Bất kì ai ở trên hoặc ngoài Facebook"
+            android:textColor="#959595"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#424242" />
+
+    <RelativeLayout
+        android:id="@+id/btnPermissionFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/imgFriend"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_permission_friend" />
+
+        <TextView
+            android:id="@+id/tvFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/imgFriend"
+            android:text="Bạn bè"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFriend"
+            android:layout_toRightOf="@+id/imgFriend"
+            android:text="Bạn bè của bạn Facebook"
+            android:textColor="#959595"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#424242" />
+
+    <RelativeLayout
+        android:id="@+id/btnPermissionPrivate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/imgPrivate"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_permission_padlock" />
+
+        <TextView
+            android:id="@+id/tvPrivate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/imgPrivate"
+            android:text="Chỉ mình tôi"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrivate"
+            android:layout_toRightOf="@+id/imgPrivate"
+            android:text="Bất kì ai ở trên hoặc ngoài Facebook"
+            android:textColor="#959595"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#424242" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_btn_profile"
+        android:backgroundTint="@color/background"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Hủy"
+        android:textColor="#15ACF1"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>

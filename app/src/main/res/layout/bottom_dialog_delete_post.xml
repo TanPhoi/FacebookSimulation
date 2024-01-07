@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Bài viết này sẽ bị xóa nên bạn sẽ không thể tìm thấy được nữa. \n
+             Bạn cũng có thể chỉnh sửa bài viết nếu như chỉ muốn thay \n
+              đổi chi tiết nào đó"
+            android:textColor="#777777"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#292929" />
+
+        <TextView
+            android:id="@+id/btnDeletePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Xóa bài viết"
+            android:textColor="#FF3434"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#292929" />
+
+        <TextView
+            android:id="@+id/btnEditPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Chỉnh sửa bài viết"
+            android:textColor="#5AB3FA"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="#252525" />
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Hủy"
+            android:textColor="#5AB3FA"
+            android:textSize="14sp" />
+    </LinearLayout>
+</layout>

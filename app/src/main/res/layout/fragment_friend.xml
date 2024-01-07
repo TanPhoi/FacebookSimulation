@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/friendFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        tools:context=".ui.friend.FriendFragment">
+
+        <com.phoint.facebooksimulation.ui.widget.ActionBarUser
+            android:id="@+id/abHome"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:action_bar_user_src_one="@drawable/ic_friend_white"
+            app:action_bar_user_src_one_enable="true"
+            app:action_bar_user_src_three_enable="true"
+            app:action_bar_user_text_one="Bạn bè"
+            app:action_bar_user_text_one_enable="true"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/btnSuggest"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/background_posts_reels"
+                android:backgroundTint="#6A6A6A"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Gợi ý"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnFriendOfUser"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/btnSuggest"
+                android:background="@drawable/background_posts_reels"
+                android:backgroundTint="#6A6A6A"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Bạn bè"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="#5E5E5E" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            android:text="Lời mời kết bạn"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvInvitationFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/tvHideFriend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:gravity="center"
+            android:text="Chưa có lời mời kết bạn"
+            android:textColor="#C6C6C6"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

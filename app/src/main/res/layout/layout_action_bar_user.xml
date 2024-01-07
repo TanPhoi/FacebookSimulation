@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/imageViewOne"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textViewOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@id/imageViewOne"
+            android:fontFamily="@font/anton_regular"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/imageViewThree"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_search" />
+
+        <ImageView
+            android:id="@+id/imageViewTwo"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@id/imageViewThree"
+            android:background="@drawable/background_oval"
+            android:padding="2dp"
+            app:srcCompat="@drawable/ic_setting" />
+
+        <TextView
+            android:id="@+id/buttonOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@id/imageViewTwo"
+            android:background="@drawable/background_rectangle"
+            android:drawableLeft="@drawable/ic_add"
+            android:padding="2dp"
+            android:text="Add"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Nguyễn Tấn Phôi"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+</layout>

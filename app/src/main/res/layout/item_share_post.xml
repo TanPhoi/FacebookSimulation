@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.phoint.facebooksimulation.data.local.model.Post" />
+
+        <variable
+            name="postShare"
+            type="com.phoint.facebooksimulation.data.local.model.Post" />
+
+        <variable
+            name="user"
+            type="com.phoint.facebooksimulation.data.local.model.User" />
+
+        <variable
+            name="userShare"
+            type="com.phoint.facebooksimulation.data.local.model.User" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <TextView
+            android:id="@+id/tvPinPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_post_pins"
+            android:drawablePadding="2dp"
+            android:text="Bài viết đã ghim"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgUser"
+            image_url_oval="@{user.avatarUser}"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/tvPinPost"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#C1C1C1"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPinPost"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/btnMenuPost"
+            android:layout_toRightOf="@id/imgUser"
+            android:text="@{user.nameUser}"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_toRightOf="@id/imgUser"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imgPermission"
+            android:layout_width="14dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/tvName"
+            android:layout_marginLeft="4dp"
+            android:layout_toEndOf="@id/tvTime"
+            android:padding="2dp"
+            android:src="@drawable/ic_permission_public" />
+
+        <ImageView
+            android:id="@+id/btnMenuPost"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/tvPinPost"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/btnDeletePost"
+            android:src="@drawable/ic_three_dots" />
+
+        <ImageView
+            android:id="@+id/btnDeletePost"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/tvPinPost"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_delete" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgUser"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{post.contentPost}"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvContent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/background_gray_border"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgUserShare"
+                    image_url_oval="@{userShare.avatarUser}"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#C1C1C1"
+                    android:elevation="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user"
+                    app:shapeAppearanceOverlay="@style/Circular" />
+
+                <TextView
+                    android:id="@+id/tvNameShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_toRightOf="@id/imgUserShare"
+                    android:text="@{userShare.nameUser}"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvTimeShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNameShare"
+                    android:layout_toRightOf="@id/imgUserShare"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imgPermissionShare"
+                    android:layout_width="14dp"
+                    android:layout_height="18dp"
+                    android:layout_below="@id/tvNameShare"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@id/tvTimeShare"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_permission_public" />
+
+                <TextView
+                    android:id="@+id/tvContentShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgUserShare"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@{postShare.contentPost}"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgStatusShare"
+                image_url="@{postShare.srcPost}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout"
+            android:layout_margin="2dp">
+
+            <ImageView
+                android:id="@+id/imgShowLike"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/ic_like_blue"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvPeopleLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@id/imgShowLike"
+                android:textColor="#AEAEAE"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/tvShowComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="2dp"
+                android:text="bình luận"
+                android:textColor="#AEAEAE"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/LinearLayout"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#3C3C3C" />
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/view"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/btnLike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgLike"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_toLeftOf="@+id/tvLike"
+                    android:src="@drawable/ic_like" />
+
+                <TextView
+                    android:id="@+id/tvLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Thích"
+                    android:textColor="#AEAEAE"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_toLeftOf="@+id/tvComment"
+                    android:src="@drawable/ic_comment" />
+
+                <TextView
+                    android:id="@+id/tvComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Bình luận"
+                    android:textColor="#AEAEAE"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_toLeftOf="@+id/tvShare"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Chia sẻ"
+                    android:textColor="#AEAEAE"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@id/llButton"
+            android:background="#000000" />
+    </RelativeLayout>
+</layout>

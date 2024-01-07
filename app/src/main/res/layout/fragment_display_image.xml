@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.displayImage.DisplayImageFragment">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true">
+
+            <com.phoint.facebooksimulation.ui.widget.ActionBarDisplayImage
+                android:id="@+id/abDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:action_bar_display_image_src_out="@drawable/ic_delete"
+                app:action_bar_display_image_src_out_enable="true" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/relativeLayoutBottom"
+            android:layout_below="@+id/relativeLayoutTop"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            tools:ignore="MissingConstraints" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#151515" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Nguyễn Tấn Phôi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="10 thg 12, 2022"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDateTime"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgPermission"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toRightOf="@id/tvDateTime"
+                    android:src="@drawable/ic_globe_americas" />
+
+                <RelativeLayout
+                    android:id="@+id/rlOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvContent"
+                    android:padding="2dp">
+
+                    <ImageView
+                        android:id="@+id/imgShowLike"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_like_blue" />
+
+                    <TextView
+                        android:id="@+id/tvPeopleLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toRightOf="@id/imgShowLike"
+                        android:textColor="#A3A3A3"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvShowComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="4dp"
+                        android:text="bình luận"
+                        android:textColor="#AEAEAE"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        tools:ignore="SmallSp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlOne"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#3C3C3C" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:orientation="horizontal"
+                    android:padding="6dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLike"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgLike"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_toLeftOf="@+id/tvLike"
+                            android:src="@drawable/ic_like" />
+
+                        <TextView
+                            android:id="@+id/tvLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Thích"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_toLeftOf="@+id/tvComment"
+                            android:src="@drawable/ic_comment" />
+
+                        <TextView
+                            android:id="@+id/tvComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Bình luận"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnShare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_toLeftOf="@+id/tvShare"
+                            android:src="@drawable/ic_share" />
+
+                        <TextView
+                            android:id="@+id/tvShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Chia sẻ"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
