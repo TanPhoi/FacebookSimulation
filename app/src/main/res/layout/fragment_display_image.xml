@@ -27,7 +27,7 @@
         <ImageView
             android:id="@+id/imgUser"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@id/relativeLayoutBottom"
             android:layout_below="@+id/relativeLayoutTop"
             android:layout_marginTop="40dp"
@@ -35,6 +35,8 @@
             tools:ignore="MissingConstraints" />
 
         <RelativeLayout
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:id="@+id/relativeLayoutBottom"
             android:layout_width="match_parent"
             android:layout_height="132dp"
@@ -43,7 +45,7 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <View
                     android:id="@+id/view1"
@@ -149,16 +151,17 @@
                     android:id="@+id/view"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_below="@id/rlOne"
+                    android:layout_above="@+id/linearLayout"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
                     android:background="#3C3C3C" />
 
                 <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_alignParentBottom="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/view"
                     android:orientation="horizontal"
                     android:padding="6dp"
                     android:weightSum="3">
@@ -219,7 +222,6 @@
                             android:textSize="14sp" />
 
                     </RelativeLayout>
-
                     <RelativeLayout
                         android:id="@+id/btnShare"
                         android:layout_width="match_parent"
@@ -247,12 +249,8 @@
                             android:textSize="14sp" />
 
                     </RelativeLayout>
-
                 </LinearLayout>
             </RelativeLayout>
-
-
         </RelativeLayout>
-
     </RelativeLayout>
 </layout>
