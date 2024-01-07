@@ -33,3 +33,6 @@ FacebookSimulation is a social networking application, making friends around, sh
 ![Screenshot 2024-01-07 154056](https://github.com/TanPhoi/FacebookSimulation/assets/155867278/f2cb570b-413a-4054-9353-323c31a90570)
 ![Screenshot 2024-01-07 154209](https://github.com/TanPhoi/FacebookSimulation/assets/155867278/aa2a5353-a9ff-46c4-aecf-92f347ba63e8)
 ![Screenshot 2024-01-07 154326](https://github.com/TanPhoi/FacebookSimulation/assets/155867278/3ce75a8f-34b4-447f-96d2-d8419eb48977)
+
+# Built With
+- [Kotlin](https://kotlinlang.org/) - As a programming language.
