@@ -50,4 +50,5 @@ FacebookSimulation is a social networking application, making friends around, sh
 - [EventBus] - The library helps communicate between application components through events.
 - [Shimmer] - Library to create shimmering effects for UI elements.
 - [Gson] - Library to convert JSON to Java objects and vice versa.
+- [Service] - Use Android Services to perform background work, such as syncing data from a server, processing notifications, or performing long-running tasks that should not be performed directly on the user interface.
 - [Clean Architecture](https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started) - Applying Clean Architecture and Solid Principles to build a robust, maintainable, and testable application.
