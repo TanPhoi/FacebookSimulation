@@ -36,3 +36,13 @@ FacebookSimulation is a social networking application, making friends around, sh
 
 # Built With
 - [Kotlin](https://kotlinlang.org/) - As a programming language.
+- [Coroutines](https://developer.android.com/kotlin/coroutines) - For multithreading while handling requests to the server and local database.
+- [Room DB](https://developer.android.com/training/data-storage/room) - To manage SQLite database easily and avoid a lot boilerplate code.
+- [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - notifies views of any database changes in an observer way.
+- [Glide](https://github.com/bumptech/glide) - It is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
+- [Retrofit] - Library for communicating with network APIs and processing JSON data.
+- [Firebase](https://firebase.google.com/) - Used for features such as analytics, realtime database, user authentication.
+- [EventBus] - The library helps communicate between application components through events.
+- [Shimmer] - Library to create shimmering effects for UI elements.
+- [Gson] - Library to convert JSON to Java objects and vice versa.
+- [Clean Architecture](https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started) - Applying Clean Architecture and Solid Principles to build a robust, maintainable, and testable application.
