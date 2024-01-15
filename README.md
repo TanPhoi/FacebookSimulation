@@ -1,5 +1,5 @@
 # Facebook Simulation
-FacebookSimulation is a social networking application, making friends around, sharing emotions simulated by the Facebook social network.
+The Facebook Simulation project involves the creation of a social networking platform that facilitates user connection, content sharing, and communication. This platform aims to replicate key functionalities found on Facebook, offering users the ability to create profiles, connect with friends, and share various forms of content.
 
 # Screenshots
 ![Screenshot 2024-01-07 145954](https://github.com/TanPhoi/FacebookSimulation/assets/155867278/f67c37c5-3f01-4bf8-bc92-cf8020eebea2)
